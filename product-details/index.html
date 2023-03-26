@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="product-details">
+		<div class="product-gallery">
+			<div class="product-image-details">
+				<img src="./image/product_single_02.jpg" alt="Product Image">
+			</div>
+			<div class="thumbnail-images">
+                <img src="./image/product_single_02.jpg" alt="Thumbnail Image 1" class="active-img">
+				<img src="./image/product_single_03.jpg" alt="Thumbnail Image 2">
+				<img src="./image/product_single_04.jpg" alt="Thumbnail Image 3">
+				<img src="./image/product_single_05.jpg" alt="Thumbnail Image 4">
+                <img src="./image/product_single_06.jpg" alt="Thumbnail Image 5">
+				<img src="./image/product_single_07.jpg" alt="Thumbnail Image 6">
+				<img src="./image/product_single_01.jpg" alt="Thumbnail Image 7">
+			</div>
+		</div>
+		<div class="product-info">
+			<h1>Product Name</h1>
+			<div class="product-price">$9.99</div>
+            <div class="py-2 product-review">
+                <i class="fa fa-star text-warning"></i>
+                <i class="fa fa-star text-warning"></i>
+                <i class="fa fa-star text-warning"></i>
+                <i class="fa fa-star text-warning"></i>
+                <i class="fa fa-star text-secondary"></i>
+                <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <h6>Brand:</h6>
+                </li>
+                <li class="list-inline-item">
+                    <p class="text-muted"><strong>Easy Wear</strong></p>
+                </li>
+            </ul>
+			<div class="product-description">
+				<ul class="nav-tabs">
+					<li class="active"><a href="#description" class="tab-link">Description</a></li>
+					<li><a href="#specs" class="tab-link">Specifications</a></li>
+					<li><a href="#reviews" class="tab-link">Reviews</a></li>
+				</ul>
+				<div class="tab-content">
+					<div id="description" class="tab active">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel neque ut tellus congue mattis. Aliquam maximus odio non turpis pulvinar, vel rhoncus mauris commodo. Vivamus aliquet tincidunt quam, eget fermentum lectus semper eget. Vestibulum pharetra magna velit, at ullamcorper purus pulvinar ut. In scelerisque tincidunt elit, eu scelerisque est bibendum id. Nunc sit amet sagittis nibh, in pellentesque nibh. Donec lobortis sapien nec lectus malesuada, nec congue ipsum venenatis.</p>
+					</div>
+					<div id="specs" class="tab">
+						<ul>
+							<li>Dimensions: 10" x 8" x 6"</li>
+							<li>Weight: 1.5 lbs</li>
+							<li>Color: Blue</li>
+							<li>Material: Polyester</li>
+						</ul>
+					</div>
+					<div id="reviews" class="tab">
+						<p>No reviews yet. Be the first to write a review!</p>
+					</div>
+				</div>
+			</div>
+			<form>
+				<label for="quantity">Quantity:</label>
+				<input type="number" id="quantity" name="quantity" min="1" max="10">
+				<button type="submit" class="add-to-cart">Add to Cart</button>
+			</form>
+		</div>
+	</div>
+</body>
+<script src="./script.js"></script>
+</html>
