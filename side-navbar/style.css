@@ -9,81 +9,141 @@ body {
     height: 100%;
 }
 
-nav {
+#btn-open {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.main-content {
+    padding: 0 10px;
+}
+
+.sidebar {
     width: 250px;
     position: absolute;
     top: 0;
     bottom: 0;
     background-color: #333;
+    display: block;
     /* border-radius: 10px; */
     box-shadow: 5px 7px 10px tgba(0, 0, 0, .5);
 }
 
-nav ul {
+.sidebar .user-name {
+    padding: 10px 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.sidebar .user-name a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.15em;
+}
+
+.sidebar .user-name #side-navbar-icon {
+    cursor: pointer;
+}
+
+.sidebar .side-navbar {
     position: relative;
     list-style-type: none;
 }
+.side-navbar .side-navbar-item{
+    position: relative;
+    color: white;
+}
 
-nav ul li a {
+.side-navbar .side-navbar-item:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+
+.side-navbar .side-navbar-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color:#eb2f64;;
+    transform: scaleY(0);
+    /* transform-origin: bottom; */
+    transition: transform .2s,
+        width .4s cubic-bezier(1, 0, 0, 1) .2s;
+}
+
+.side-navbar .side-navbar-item:hover::before,
+.side-navbar .active::before {
+    transform: scaleY(1);
+    width: 100%;
+}
+.sidebar .side-navbar li a {
     display: flex;
     align-items: center;
     font-family: arial;
     font-size: 1.15em;
     text-decoration: none;
     text-transform: capitalize;
-    color: #fff;
+    color: #fff !important;
     padding: 10px 30px;
     height: 50px;
     transition: .5s ease;
+    position: relative;
 }
 
-nav ul li a:hover {
+/* .sidebar .side-navbar li a:hover {
     background-color: #fff;
     color: #333;
     border-radius: 0 30px;
-}
+} */
 
-nav ul ul {
+.sidebar .side-navbar ul {
     position: absolute;
     left: 250px;
     top: 0;
     display: none;
     width: 200px;
+    list-style-type: none;
     background-color: #333;
     border-right: 1px solid #fff;
     border: 5px;
     box-shadow: 2px 2px 10p rgba(0, 0, 0.1);
 }
 
-nav ul span {
+.sidebar .side-navbar #side-navbar-icon {
     position: absolute;
     right: 20px;
     font-size: 1.5em;
 }
 
-nav ul .dropdown {
+.sidebar .side-navbar .dropdown {
     position: relative;
 }
 
-nav ul .dropdown:hover>ul {
+.sidebar .side-navbar .dropdown:hover>ul {
     display: initial;
 }
 
-nav ul .dropdown_two{
+.sidebar .side-navbar .dropdown_two {
     padding-bottom: 5px;
 }
 
-nav ul .dropdown_two ul {
+.sidebar .side-navbar .dropdown_two ul {
     position: absolute;
     left: 200px;
     top: 0;
     padding-bottom: 5px;
 }
 
-nav ul .dropdown_two:hover ul {
+.sidebar .side-navbar .dropdown_two:hover ul {
     display: initial;
 }
 
-nav ul .open_folder ul {
+.sidebar .side-navbar .open_folder ul {
     top: 100px;
 }

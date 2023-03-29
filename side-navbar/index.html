@@ -7,12 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sidebar</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li class="dropdown"><a href="#">file <span>&rsaquo;</span></a>
+    
+    
+    <nav id="sidebar" class="sidebar">
+        <ul class="side-navbar" id="side-navbar">
+            <p class="user-name"><a href="#">User Name </a><span id="side-navbar-icon" class="btn-close">x</span></p>
+            <li class="dropdown side-navbar-item">
+                <a class="side-navbar-link" href="#">file <span id="side-navbar-icon">&rsaquo;</span></a>
                 <ul>
                     <li><a href="#">new file</a></li>
                     <li><a href="#">open file</a></li>
@@ -26,11 +31,20 @@
                 </ul>
 
             </li>
-            <li><a href="#">edit</a></li>
-            <li><a href="#">selection</a></li>
-            <li><a href="#">tools</a></li>
-            <li><a href="#">view</a></li>
-            <li class="dropdown"><a href="#">project</a>
+            <li class="side-navbar-item">
+                <a class="side-navbar-link" href="#">edit</a>
+            </li>
+            <li class="side-navbar-item">
+                <a class="side-navbar-link" href="#">selection</a>
+            </li>
+            <li class="side-navbar-item">
+                <a class="side-navbar-link" href="#">tools</a>
+            </li>
+            <li class="side-navbar-item">
+                <a href="#" class="side-navbar-link">view</a>
+            </li>
+            <li class="side-navbar-item dropdown">
+                <a href="#" class="side-navbar-link">project <span id="side-navbar-icon">&rsaquo;</span></a>
                 <ul>
                     <li><a href="#">new project</a></li>
                     <li><a href="#">open project</a></li>
@@ -39,6 +53,34 @@
             </li>
         </ul>
     </nav>
+    <div class="main" id="main">
+        <span id="btn-open">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </span>
+        <div class="main-content">
+            <div id="section1">
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel felis eu augue semper suscipit.</p>
+            </div>
+            <div id="section2">
+                <h2>Section 2</h2>
+                <p>Aliquam erat volutpat. Pellentesque et consequat turpis, non bibendum velit. Fusce euismod, nisl at scelerisque sagittis, justo lorem tincidunt tellus, nec varius felis mauris sit amet lorem.</p>
+            </div>
+            <div id="section3">
+                <h2>Section 3</h2>
+                <p>Maecenas blandit odio at lorem sagittis, sit amet tempus felis faucibus. Ut molestie diam id convallis congue.</p>
+            </div>
+            <div id="section4">
+                <h2>Section 4</h2>
+                <p>Vivamus in nulla a orci ornare euismod. Praesent sagittis arcu eu feugiat blandit. Integer semper, ipsum sed hendrerit commodo, tellus justo tincidunt tellus, ac rhoncus est nulla eget arcu.</p>
+            </div>
+            <div id="section5">
+                <h2>Section 5</h2>
+                <p>Suspendisse non dignissim nulla. Duis bibendum, velit sit amet ultrices accumsan, lorem sapien volutpat velit, a bibendum risus turpis quis odio.</p>
+            </div>
+        </div>
+    
+    </div>
 </body>
-
+<script src="./script.js"></script>
 </html>
