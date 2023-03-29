@@ -86,7 +86,7 @@ body {
     display: flex;
     align-items: center;
     font-family: arial;
-    font-size: 1.15em;
+    font-size: 1em;
     text-decoration: none;
     text-transform: capitalize;
     color: #fff !important;
@@ -101,18 +101,29 @@ body {
     color: #333;
     border-radius: 0 30px;
 } */
-
-.sidebar .side-navbar ul {
+.sidebar .side-navbar .side-navbar-dropdown-content-2{
+    width: 350px;
+}
+.sidebar .side-navbar .side-navbar-dropdown-content-1{
+    width: 200px;
+}
+.sidebar .side-navbar .side-navbar-dropdown-content-2,
+.sidebar .side-navbar .side-navbar-dropdown-content-1 {
     position: absolute;
     left: 250px;
     top: 0;
     display: none;
-    width: 200px;
-    list-style-type: none;
+    /* width: 350px; */
+    /* list-style-type: none; */
     background-color: #333;
     border-right: 1px solid #fff;
     border: 5px;
     box-shadow: 2px 2px 10p rgba(0, 0, 0.1);
+}
+
+.sidebar .side-navbar .side-navbar-dropdown-content-2 ul,
+.sidebar .side-navbar .side-navbar-dropdown-content-1 ul{
+     list-style-type: none; 
 }
 
 .sidebar .side-navbar #side-navbar-icon {
@@ -121,29 +132,32 @@ body {
     font-size: 1.5em;
 }
 
-.sidebar .side-navbar .dropdown {
+.sidebar .side-navbar .side-navbar-dropdown {
     position: relative;
 }
 
-.sidebar .side-navbar .dropdown:hover>ul {
-    display: initial;
+.sidebar .side-navbar .side-navbar-dropdown:hover .side-navbar-dropdown-content-2,
+.sidebar .side-navbar .side-navbar-dropdown:hover .side-navbar-dropdown-content-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.sidebar .side-navbar .dropdown_two {
+.sidebar .side-navbar .side-navbar-dropdown-two {
     padding-bottom: 5px;
 }
 
-.sidebar .side-navbar .dropdown_two ul {
+.sidebar .side-navbar .side-navbar-dropdown-two ul {
     position: absolute;
     left: 200px;
     top: 0;
     padding-bottom: 5px;
 }
 
-.sidebar .side-navbar .dropdown_two:hover ul {
+.sidebar .side-navbar .side-navbar-dropdown-two:hover ul {
     display: initial;
 }
 
-.sidebar .side-navbar .open_folder ul {
+.sidebar .side-navbar .open-folder ul {
     top: 100px;
 }
