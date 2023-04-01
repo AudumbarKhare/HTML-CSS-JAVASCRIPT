@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collapse</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <!-- content for sidebar -->
+      <div class="collapse">
+        <button type="button" class="collapsible">Category <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+        <div class="content">
+          <ul class="content-list">
+            <li class="content-item">Womens Fashion</li>
+            <li class="content-item">Mens Fashion</li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse">
+        <button type="button" class="collapsible">Brand <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+        <div class="content">
+          <ul class="content-list">
+            <li class="content-item"><input type="checkbox" name="" id="">Nike</li>
+            <li class="content-item"><input type="checkbox" name="" id="">Puma</li>
+            <li class="content-item"><input type="checkbox" name="" id="">Lifestyle</li>
+            <li class="content-item"><input type="checkbox" name="" id="">Capriese</li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse">
+        <button type="button" class="collapsible">Colors <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+        <div class="content">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="collapse">
+        <button type="button" class="collapsible">Price <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+        <div class="content">
+          <div class="price-slider">
+            <input type="range" id="priceRange" min="100" max="10000" step="100" value="1000">
+            <div class="slider-values">
+              <span class="min-price">$100</span>
+              <span class="max-price">$10,000</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="main-content">
+      <!-- content for main content -->
+    </div>
+  </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
