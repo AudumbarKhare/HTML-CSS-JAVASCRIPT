@@ -11,7 +11,7 @@ for (i = 0; i < coll.length; i++) {
 
     var content = this.nextElementSibling;
     console.log(content.style.display);
-    if (content.style.display === "block" || content.style.display=="") {
+    if (content.style.display === "block" || content.style.display == "") {
       content.style.display = "none";
     } else {
       content.style.display = "block";
@@ -48,7 +48,7 @@ let data = [];
 // retrieve data from fakestoreapi.com
 $.ajax({
   url: "https://fakestoreapi.com/products",
-  success: function(response) {
+  success: function (response) {
     data = response;
     updateData();
     updatePagination();
@@ -68,8 +68,8 @@ function updateData() {
     </div>
     <div class="product-info">
       <h3>${item.title}</h3>
-      <p>${item.description}</p>
-      <div class="price">${item.price}</div>
+      <p>${wordsLimit(item.description)}</p>
+      <div class="price">$ ${item.price}</div>
       <button class="add-to-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
       <button class="add-to-favorite"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
       <a href="./pages/product-details.html" class="view-product"><i class="fa fa-eye" aria-hidden="true"></i></a>
@@ -87,7 +87,7 @@ function updatePagination() {
     html += `<a href="#" data-page="${i}">${i}</a>`;
   }
   $("#pagination-container").html(html);
-  $("#pagination-container a").click(function(event) {
+  $("#pagination-container a").click(function (event) {
     event.preventDefault();
     currentPage = parseInt($(this).attr("data-page"));
     updateData();
@@ -95,3 +95,15 @@ function updatePagination() {
   });
 }
 
+function wordsLimit(productDetails) {
+  console.log(typeof productDetails);
+  const words = productDetails.split(' ');
+  return words.slice(0, 25).join(' ') + '...';
+  //return productDetails;
+  // productDetails.forEach(detail => {
+  //   const words = detail.textContent.trim().split(' ');
+  //   if (words.length > 25) {
+  //     return words.slice(0, 25).join(' ') + '...';
+  //   }
+  // });
+}
