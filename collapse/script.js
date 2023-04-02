@@ -39,49 +39,7 @@ priceRange.addEventListener("input", function () {
 });
 
 
-// const pagination = document.querySelector('.pagination');
-// const prevBtn = pagination.querySelector('.prev');
-// const nextBtn = pagination.querySelector('.next');
-// const pages = pagination.querySelectorAll('.page');
 
-// let currentPage = 1;
-
-// function showPage(page) {
-//   // hide all pages
-//   pages.forEach((p) => p.classList.remove('active'));
-//   // show the selected page
-//   pages[page - 1].classList.add('active');
-//   // disable/enable buttons based on current page
-//   if (currentPage === 1) {
-//     prevBtn.disabled = true;
-//   } else {
-//     prevBtn.disabled = false;
-//   }
-//   if (currentPage === pages.length) {
-//     nextBtn.disabled = true;
-//   } else {
-//     nextBtn.disabled = false;
-//   }
-// }
-
-// showPage(currentPage);
-
-// prevBtn.addEventListener('click', () => {
-//   currentPage--;
-//   showPage(currentPage);
-// });
-
-// nextBtn.addEventListener('click', () => {
-//   currentPage++;
-//   showPage(currentPage);
-// });
-
-// pages.forEach((p) => {
-//   p.addEventListener('click', () => {
-//     currentPage = parseInt(p.textContent);
-//     showPage(currentPage);
-//   });
-// });
 
 const itemsPerPage = 10;
 let currentPage = 1;
@@ -96,16 +54,6 @@ $.ajax({
     updatePagination();
   }
 });
-
-{/* 
-
-
- <div class="product">
-        <img src="${item.image}" alt="${item.title}">
-        <h3>${item.title}</h3>
-        <p>${item.description}</p>
-        <span>$${item.price}</span>
-      </div>*/}
 
 // update the display of the data based on the current page
 function updateData() {
