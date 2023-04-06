@@ -104,7 +104,7 @@ function deleteFromCart(e) {
   }
   e.target.closest('tr').remove();
   if (cartTable.querySelectorAll('tbody tr').length === 0) {
-    table.innerHTML = `<tr><td colspan="5" style="text-align:center;">No More Item into cart</td></tr>`
+    table.innerHTML = `<tr><td colspan="${cartTable.querySelectorAll('thead tr th').length}" style="text-align:center;">No More Item into cart</td></tr>`
   }
   updateCart();
 }
