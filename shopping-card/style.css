@@ -1,0 +1,137 @@
+/* Styles for the cart table */
+.shoping-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-table{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.item-table h1{
+    text-align: center;
+ }
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td .product-image {
+    width: 50px;
+}
+
+td.quantity {
+    text-align: center;
+}
+
+td.price_per_quantity {
+    text-align: right;
+}
+
+td.quantity input[type=text] {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+}
+
+td.item_total_price {
+    text-align: right;
+}
+
+td.total {
+    font-weight: bold;
+}
+
+td.actions {
+    text-align: center;
+}
+
+div#totals div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+/* Styles for the totals section */
+#totals {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+#totals div {
+
+    padding: 10px;
+    background: #4CAF50;
+    margin: 1px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#totals span {
+    margin-right: 10px;
+}
+
+/* Media queries for responsive design */
+@media only screen and (min-width: 600px) {
+  .shoping-card {
+    flex-direction: row;
+  }
+  
+  .item-table{
+    width: 70%;
+    margin-right: 5%;
+    overflow-x: auto;
+  }
+  
+  .calcultion {
+    width: 25%;
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .item-table{
+    width: 80%;
+  }
+  
+  .calcultion {
+    padding-top: 80px;
+    width: 10%;
+  }
+}
