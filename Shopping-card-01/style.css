@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D3D3D3;
+}
+
+.container {
+    width: 100%;
+}
+
+  
+
+.alert {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert .alert-message {
+    width: 30%;
+    background: #198754;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopping-cart {
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.shopping-cart .shopping-cart-right {
+    width: 50%;
+    background: #ffffff;
+    padding: 0px 5px;
+    height: fit-content;
+    box-shadow: 5px 5px 10px #888888, -5px -5px 10px #999999;
+}
+
+.shopping-cart .shopping-cart-right .product-length {
+    padding: 20px;
+}
+
+.product-details-info {
+    padding: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.product-details-info:not(:last-child) {
+    border-bottom: 2px solid #a19f9f;
+}
+
+.shopping-cart .shopping-cart-right .item-img {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.shopping-cart .shopping-cart-right img {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.shopping-cart .shopping-cart-right .shopping-cart-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.shopping-cart .shopping-cart-right .shopping-cart-details .items-counts {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.btn-plus {
+    border-right: none;
+}
+
+.btn-mins {
+    border-left: none;
+}
+
+.shopping-cart .shopping-cart-right .shopping-cart-details .items-counts button {
+    background: transparent;
+    outline: none;
+    padding: 3px;
+    border: 1px solid;
+}
+
+.shopping-cart .shopping-cart-right .shopping-cart-details .items-counts input[type=text] {
+    width: 26px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.shopping-cart .shopping-cart-right .shopping-cart-details .extra-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopping-cart .shopping-cart-right .shopping-cart-details .extra-link a {
+    text-decoration: none;
+    color: #333;
+}
+
+.shopping-cart .shopping-cart-right .shopping-cart-details .extra-link a i {
+    padding-right: 10px;
+}
+
+.shopping-cart .shopping-cart-left {
+    width: 25%;
+    margin-left: 7px;
+}
+
+.shopping-cart .shopping-cart-left div {
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px #888888;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.shopping-cart .shopping-cart-left h3 {
+    padding-bottom: 24px;
+    color: #333;
+}
+
+.shopping-cart .shopping-cart-left .shopping-cart-calculation p {
+    padding-bottom: 15px;
+}
+
+.shopping-cart .shopping-cart-left .shopping-cart-calculation p.total {
+    padding-top: 15px;
+    border-top: 2px solid #a19f9f;
+}
+
+.shopping-cart .shopping-cart-left .shopping-cart-calculation p span {
+    float: right
+}
+
+.shopping-cart .shopping-cart-left .shopping-cart-calculation .btn-checkout,
+.shopping-cart .shopping-cart-left .discount-coupon .btn-apply {
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shopping-cart .shopping-cart-left .discount-coupon input[type=text] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+}
+
+.shopping-cart .shopping-cart-left div .tip {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+/* 
+/* Extra Small Devices (Phones) */
+@media only screen and (max-width: 576px) {
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .shopping-cart {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  .shopping-cart .shopping-cart-left {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .shopping-cart .shopping-cart-left .shopping-cart-calculation {
+    margin-top: 20px;
+  }
+
+  .shopping-cart .shopping-cart-left h3 {
+    font-size: 24px;
+  }
+
+  .shopping-cart .shopping-cart-right {
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: none;
+  }
+
+  .shopping-cart .shopping-cart-right .product-length {
+    padding: 10px;
+  }
+
+  .shopping-cart .shopping-cart-right .item-img {
+    width: 40%;
+  }
+
+  .shopping-cart .shopping-cart-right .shopping-cart-details .items-counts {
+    margin-top: 10px;
+  }
+
+  .shopping-cart .shopping-cart-right .shopping-cart-details .items-counts button {
+    padding: 2px;
+  }
+
+  .shopping-cart .shopping-cart-left .discount-coupon input[type=text] {
+    font-size: 14px;
+  }
+
+}
+
+/* Small Devices (Tablets) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+
+  .shopping-cart .shopping-cart-left .discount-coupon {
+    margin-bottom: 20px;
+  }
+
+  .shopping-cart .shopping-cart-right .shopping-cart-details .extra-link a i {
+    display: none;
+  }
+
+}
+
+/* Medium Devices (Desktops, Laptops) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+  .shopping-cart .shopping-cart-left .shopping-cart-calculation .btn-checkout,
+  .shopping-cart .shopping-cart-left .discount-coupon .btn-apply {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+}
+
+/* Large Devices (Desktops, Laptops) */
+@media only screen and (min-width: 993px) {
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .shopping-cart {
+    padding: 50px 0;
+  }
+
+  .shopping-cart .shopping-cart-left {
+    width: 25%;
+    margin-left: 7px;
+  }
+
+  .shopping-cart .shopping-cart-right {
+    width: 68%;
+    margin-left: 25px;
+    box-shadow: 5px 5px 10px #888888, -5px -5px 10px #999999;
+  }
+
+  .shopping-cart .shopping-cart-left .shopping-cart-calculation p.total {
+    padding-top: 20px;
+    border-top: none;
+  }
+
+  .shopping-cart .shopping-cart-left .shopping-cart-calculation .btn-checkout,
+  .shopping-cart .shopping-cart-left .discount-coupon .btn-apply {
+    font-size: 16px;
+  }
+
+} 
