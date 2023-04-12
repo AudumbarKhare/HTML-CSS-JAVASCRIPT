@@ -14,7 +14,7 @@ window.onload = () => {
     }
 
     getData().then(data => {
-        // Do something with the retrieved data
+        // the retrieved data
         shopping_cart_item.push(...data);
         showShappingCartItem(shopping_cart_item);
     }).catch(error => {
@@ -22,7 +22,7 @@ window.onload = () => {
         console.error(error);
     });
 
-
+    //show item into web page
     function showShappingCartItem(products) {
         let html = "";
         products.forEach(product => {
@@ -57,15 +57,18 @@ window.onload = () => {
         const itemCount = document.querySelector('.shopping-cart-details div.items-counts');
         const removeItem = document.querySelectorAll('div.extra-link');
 
+        //add event listener to add and minus button
         itemCount.addEventListener('click', (e) => {
-            console.log(e.target.classList.contains('add'));
             if (e.target.classList.contains('add')) {
+                //call increment function to add item into cart
                 incrementItemToCart(itemCount);
             } else if (e.target.classList.contains('minus')) {
+                //call decrement function to minus item into cart
                 decrementItemFromCart(itemCount);
             }
         });
 
+        //function to remove an item from the cart
         removeItem.forEach(i => {
             i.querySelector('.remove-item').addEventListener('click', () => {
                 const id = i.querySelector('.remove-item').getAttribute('id');
@@ -108,6 +111,7 @@ window.onload = () => {
         document.querySelector('.shopping-cart-calculation p.total span').textContent = `$${total_amount.toFixed(2)}`;
     }
 
+    //add item function into shopping cart
     function incrementItemToCart(input) {
         const quantity = parseInt(input.querySelector('.item-quantity').value);
         if (quantity < 10) {
@@ -116,6 +120,7 @@ window.onload = () => {
         updateCart();
     }
 
+    //miuns item function from shopping cart
     function decrementItemFromCart(input) {
         const quantity = parseInt(input.querySelector('.item-quantity').value);
         if (quantity > 1) {
@@ -123,6 +128,8 @@ window.onload = () => {
         }
         updateCart();
     }
+
+    //generate 6 digit random coupon code
 
     function generateRandomCoupon() {
         var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -136,6 +143,8 @@ window.onload = () => {
 
     var new_coupon_code = generateRandomCoupon()
     document.querySelector('.discount-coupon-no b').textContent = new_coupon_code;
+
+    //add event listener to apply coupon code
 
     document.querySelector('.btn-apply').addEventListener('click', () => {
         discount_per = Math.floor(Math.random() * 10) + 1;
@@ -153,6 +162,8 @@ window.onload = () => {
     alert_close.addEventListener('click', () => {
         alert_box.style.display = 'none';
     });
+
+    // this function used for delivery date
 
    function show_delivery_date(){
         const after_day = Math.floor(Math.random()*10)+1;
